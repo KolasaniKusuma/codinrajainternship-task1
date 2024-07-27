@@ -1,0 +1,190 @@
+Delivered-To: supriyajarugu6@gmail.com
+Received: by 2002:ab0:32c7:0:b0:80f:6d3e:f7c3 with SMTP id f7csp4105571uao;
+        Fri, 5 Jul 2024 06:51:12 -0700 (PDT)
+X-Received: by 2002:a05:6512:204:b0:52c:db04:5a57 with SMTP id 2adb3069b0e04-52ea063d909mr3203830e87.31.1720187471828;
+        Fri, 05 Jul 2024 06:51:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1720187471; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BIf1H6Ly/Jg41zHCP3iTJizTzPxtiDfIBrGDdo6e24SDVnjoFXhjBkRHQrokJMaHwu
+         1BXsr+pk5FxizeckF/aJx98MOkGDR8d+9l+1iywXIlgj1I1cCxBI0IivygyVxTvqUmn3
+         9f6jvryF3wnfpynG6dD3+u2UsZpkzZoy04t/Un0nmoi0oZRJMFsQxBj6XnNst7+og2qk
+         pcWHTPXkTL47zXm8f2mrefWxdIBq762g/rDqLXCMzPxEAQvrZBIl+/BNJsWsDuzJAjD8
+         RJ9qA0EVi/AaTSrZrC9Oa/ojF2aPBYuqROy+GpO7pUmO/zjKkBmKKy2/CyXrMFkQpx94
+         NsSA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=ulRQMPORcyklAgNawQGm+CuCFlVL/lf2lS0jiXLyKOo=;
+        fh=laZOv0F7muzLmu10Rb+JtNcGUNaXDqrUKUps5/ulNek=;
+        b=F/iPM2gBDZ2gqHuRqdJIsVPzXOBWkt7RWiO82u1Jq57MyDR5wZEEe4liPXD9S6heZL
+         xikpOGRY/Ay56lfyL/DR2sVjCK9vGFKN/DMOAKq0L9gdOTw3SRc88nLIdkFtf5ANh9eM
+         zH4dwo+oQi6AVF6wtuV1M518AFWSlrUzMFKMxtKvTa6EfCCXqqbpXTOFbk7wHdor/tg/
+         DiicK5R7rGFZq2YVJ1mIi+GxKNTzvXX5AgBeiwQgl/H4Zo73EIo2mQ9n5kiBwH1s7nYO
+         a/TeGchuoGLxKBy6152XeRmwk2mMbVI0c+RxfT/IPyYy9bJDx7Nfucs4t5vCyzu94YoM
+         aQDg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=nRuw07gs;
+       spf=pass (google.com: domain of hemanthkumardivvela@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=hemanthkumardivvela@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <hemanthkumardivvela@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 2adb3069b0e04-52e95fbb9b2sor1595804e87.23.2024.07.05.06.51.11
+        for <supriyajarugu6@gmail.com>
+        (Google Transport Security);
+        Fri, 05 Jul 2024 06:51:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of hemanthkumardivvela@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=nRuw07gs;
+       spf=pass (google.com: domain of hemanthkumardivvela@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=hemanthkumardivvela@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1720187471; x=1720792271; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=ulRQMPORcyklAgNawQGm+CuCFlVL/lf2lS0jiXLyKOo=;
+        b=nRuw07gsWEFiWgpeM5hPnrzGMasr2RcLLc5l9DtvYdS9tHjuEjBwbKRpJPPmKfSfbs
+         kC31cwcrDqc7vfjUjXPBhD2wJbLZdw6qk5alf68Gs9uu/tY67vULcR7PazOhaVgpziRl
+         /UjGjevAaG+CxceuMUkxr5w4OhWcNJdEPWXa8Xz66ysuRhnI/8FteHh3xdc6s5pMs90a
+         l7ddlowLiTe4zp79VvkZtZtjxAo4BcMCStyqty1OD8KeqlxhRU6766LMcqvQI+rAzjtY
+         t0zy2FCni5NjOXvI+Bz8Sdr7lZkOkP7G6WtKExTIzXgs/mWCKJbLW3Qu3O3SP730TP+y
+         einw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1720187471; x=1720792271;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=ulRQMPORcyklAgNawQGm+CuCFlVL/lf2lS0jiXLyKOo=;
+        b=Kkbc0XDG3gXlHBqv/u7Cmdc1I+a4/4ty2bRTp/VQURyxqmrq16DyWb6coR1AIVvnU8
+         15AbQ3Ljh3WSpOmXHgZnfjaPjJU3UxRWr5oAKEeW2Dx8PJYgJhuYjdpsri/iHxcC+zOU
+         0BDSU1LICv+JUdlCqmGmck8uWI6A7TUr90NLWw7gn7+L4twh9rNPsDtB/U0DahgqJlBh
+         PQV6ks1vbI4nCum1OvhXcBSCaGjEE0hWlIAUluP+kGypSS0armX/OtM+84pmeJ87Szw3
+         Dx66zZJ5Co6tbz2j5wwD16GrjVBisUvqfwAl5mSczcBXe9ggq+IfCRSeNBkVDo0O45N1
+         JkPw==
+X-Gm-Message-State: AOJu0YzV7AGmKm5m+7T6Xtb2XhLJ+8qwuZeIt6Nys9nq+Hm3s7iCw4LC
+	etMNqXzStQuDAdipVYftgvtyNQrXpZgQM5OJXNv8oyWEf/5zy+hLvE2Nk+LFwfN034xtWUI9ucF
+	kCTsaDC2Db98SnRCIHCALD80JxiBO1HHZ
+X-Google-Smtp-Source: AGHT+IGfa6FzLY94EGqUsyEnyVN9jo6zwRCLRJHUAQqiaHeQsSSbR/PlCJA/32AzrHdditYTDDTtp00uD7lCYsUi9Rc=
+X-Received: by 2002:ac2:4209:0:b0:52d:582e:4117 with SMTP id
+ 2adb3069b0e04-52ea06c8bddmr2909451e87.54.1720187470503; Fri, 05 Jul 2024
+ 06:51:10 -0700 (PDT)
+MIME-Version: 1.0
+References: <e145dba3-3b5d-431c-918d-912f8a8ec26b@docs-share.google.com> <autogen-java-90d4e4f3-de90-48d4-84d2-424cdc552148@google.com>
+In-Reply-To: <autogen-java-90d4e4f3-de90-48d4-84d2-424cdc552148@google.com>
+From: Hemanth <hemanthkumardivvela@gmail.com>
+Date: Fri, 5 Jul 2024 19:23:40 +0530
+Message-ID: <CAEMMwZozA-5xDNurNQDr=ARvaofe1qmTxvb6z0aXEPthK=TWKg@mail.gmail.com>
+Subject: Fwd: Item shared with you: "movies recommended system "
+To: Supriya <supriyajarugu6@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000206c3a061c805bda"
+
+--000000000000206c3a061c805bda
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Sekhar (via Google Drive) <drive-shares-dm-noreply@google.com>
+Date: Fri, Jul 5, 2024 at 6:35=E2=80=AFPM
+Subject: Item shared with you: "movies recommended system "
+To: <hemanthkumardivvela@gmail.com>
+
+
+Sekhar shared an item
+[image: Header profile photo]
+Sekhar (kothapallirajasekhar06@gmail.com) has invited you to *edit* the
+following item:
+movies recommended system
+<https://colab.research.google.com/drive/1OaEs_oeNa0w-rm16ipp5jPKFhhWXOw8k?=
+ts=3D6687ef7b>
+
+Open
+<https://colab.research.google.com/drive/1OaEs_oeNa0w-rm16ipp5jPKFhhWXOw8k?=
+ts=3D6687ef7b>
+If you don't want to receive files from this person, block the sender
+<https://drive.google.com/drive/blockuser?blockerEmail=3Dhemanthkumardivvel=
+a@gmail.com&blockeeEmail=3Dkothapallirajasekhar06@gmail.com&usp=3Dsharing_e=
+ib_m>
+from Drive
+Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA
+You have received this email because kothapallirajasekhar06@gmail.com
+shared a file or folder located in Google Drive with you. [image: Google]
+<https://www.google.com/>
+
+--000000000000206c3a061c805bda
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">---------- Forwarded message ---------<br>From: <strong cla=
+ss=3D"gmail_sendername" dir=3D"auto">Sekhar (via Google Drive)</strong> <sp=
+an dir=3D"auto">&lt;<a href=3D"mailto:drive-shares-dm-noreply@google.com">d=
+rive-shares-dm-noreply@google.com</a>&gt;</span><br>Date: Fri, Jul 5, 2024 =
+at 6:35=E2=80=AFPM<br>Subject: Item shared with you: &quot;movies recommend=
+ed system &quot;<br>To:  &lt;<a href=3D"mailto:hemanthkumardivvela@gmail.co=
+m">hemanthkumardivvela@gmail.com</a>&gt;<br></div><br><br><div><table style=
+=3D"border-collapse:collapse;width:100%;background-color:white;text-align:c=
+enter" role=3D"presentation"><tbody><tr><td style=3D"padding:24px 0 16px 0"=
+><table style=3D"border-collapse:collapse;font-family:Roboto,Arial,Helvetic=
+a,sans-serif;word-wrap:break-word;word-break:break-word;width:90%;margin:au=
+to;max-width:700px;min-width:280px;text-align:left" role=3D"presentation"><=
+tbody><tr><td style=3D"padding:0"><table style=3D"width:100%;border:1px sol=
+id #dadce0;border-radius:8px;border-spacing:0;table-layout:fixed;border-col=
+lapse:separate" role=3D"presentation"><tbody><tr><td style=3D"padding:4.5%"=
+ dir=3D"ltr"><div style=3D"margin-bottom:32px;font-family:Google Sans,Robot=
+o,Arial,Helvetica,sans-serif;font-style:normal;font-size:28px;line-height:3=
+6px;color:#3c4043">Sekhar shared an item</div><table style=3D"border-collap=
+se:collapse;font-family:Roboto,Arial,Helvetica,sans-serif;font-size:16px;li=
+ne-height:24px;color:#202124;letter-spacing:0.1px;table-layout:fixed;width:=
+100%" role=3D"presentation"><tbody><tr><td style=3D"padding:0;vertical-alig=
+n:top;width:50px"><div><img style=3D"border-radius:50%;display:block" width=
+=3D"50" height=3D"50" src=3D"https://lh3.googleusercontent.com/a/ACg8ocKa55=
+SBaUX34bW74jFljubWsEmT-Mr09JoAmwquhodIU7IBTDcy=3Ds64" alt=3D"Header profile=
+ photo"></div></td><td style=3D"padding:0;vertical-align:top;padding-left:1=
+2px"><div style=3D"padding-top:12px">Sekhar (<a href=3D"mailto:kothapallira=
+jasekhar06@gmail.com" style=3D"color:inherit;text-decoration:none" target=
+=3D"_blank">kothapallirajasekhar06@gmail.com</a>) has invited you to <b>edi=
+t</b> the following item:</div></td></tr></tbody></table><table style=3D"bo=
+rder-spacing:0 4px;table-layout:fixed;width:100%" role=3D"presentation"><tb=
+ody><tr style=3D"height:28px"></tr><tr><td style=3D"padding:0"><a href=3D"h=
+ttps://colab.research.google.com/drive/1OaEs_oeNa0w-rm16ipp5jPKFhhWXOw8k?ts=
+=3D6687ef7b" style=3D"color:#3c4043;display:inline-block;max-width:100%;tex=
+t-decoration:none;vertical-align:top;border:1px solid #dadce0;border-radius=
+:16px;white-space:nowrap" target=3D"_blank"><div style=3D"line-height:18px;=
+overflow:hidden;text-overflow:ellipsis;padding:6px 12px"><span style=3D"dis=
+play:inline-block;vertical-align:top;min-width:26px;width:26px"><img src=3D=
+"http://drive-thirdparty.googleusercontent.com/32/type/application/vnd.goog=
+le.colaboratory" width=3D"18" height=3D"18" style=3D"vertical-align:top" ro=
+le=3D"presentation"></span><span style=3D"font:500 14px/18px Google Sans,Ro=
+boto,Arial,Helvetica,sans-serif;display:inline;letter-spacing:0.2px">movies=
+ recommended system </span></div></a></td></tr></tbody></table><table style=
+=3D"border-collapse:collapse" role=3D"presentation"><tbody><tr style=3D"hei=
+ght:32px"><td></td></tr></tbody></table><div><a href=3D"https://colab.resea=
+rch.google.com/drive/1OaEs_oeNa0w-rm16ipp5jPKFhhWXOw8k?ts=3D6687ef7b" role=
+=3D"button" style=3D"padding:0 24px;font:500 14px/36px Google Sans,Roboto,A=
+rial,Helvetica,sans-serif;border:none;border-radius:18px;box-sizing:border-=
+box;display:inline-block;letter-spacing:.25px;min-height:36px;text-align:ce=
+nter;text-decoration:none;background-color:#1a73e8;color:#fff" target=3D"_b=
+lank">Open</a></div><table style=3D"border-collapse:collapse" role=3D"prese=
+ntation"><tbody><tr style=3D"height:32px"><td></td></tr></tbody></table><di=
+v style=3D"font-size:12px;color:#5f6368">If you don&#39;t want to receive f=
+iles from this person, <a href=3D"https://drive.google.com/drive/blockuser?=
+blockerEmail=3Dhemanthkumardivvela@gmail.com&amp;blockeeEmail=3Dkothapallir=
+ajasekhar06@gmail.com&amp;usp=3Dsharing_eib_m" style=3D"color:#1a73e8;text-=
+decoration:none" target=3D"_blank">block the sender</a> from Drive</div></t=
+d></tr></tbody></table><table style=3D"border-collapse:collapse;width:100%"=
+ role=3D"presentation"><tbody><tr><td style=3D"padding:24px 4.5%"><table st=
+yle=3D"border-collapse:collapse;width:100%" dir=3D"ltr"><tbody><tr><td styl=
+e=3D"padding:0;font-family:Roboto,Arial,Helvetica,sans-serif;color:#5f6368;=
+width:100%;font-size:12px;line-height:16px;min-height:40px;letter-spacing:.=
+3px">Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA<br=
+> You have received this email because <a href=3D"mailto:kothapallirajasekh=
+ar06@gmail.com" style=3D"color:inherit;text-decoration:none" target=3D"_bla=
+nk">kothapallirajasekhar06@gmail.com</a> shared a file or folder located in=
+ Google Drive with you.</td><td style=3D"padding:0;padding-left:20px;min-wi=
+dth:96px"><a href=3D"https://www.google.com/" style=3D"text-decoration:none=
+" target=3D"_blank"><img src=3D"https://www.gstatic.com/images/branding/goo=
+glelogo/2x/googlelogo_grey_tm_color_96x40dp.png" width=3D"96" height=3D"40"=
+ alt=3D"Google" style=3D"font-size:16px;font-weight:500;color:#5f6368"></a>=
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tab=
+le></td></tr></tbody></table></div></div></div>
+
+--000000000000206c3a061c805bda--

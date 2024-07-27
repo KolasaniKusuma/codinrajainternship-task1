@@ -1,1 +1,1 @@
-# codinrajainternship-task1
+# CodingRajaTechnologiesTask1
